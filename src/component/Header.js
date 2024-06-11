@@ -1,9 +1,9 @@
-import AppLogo from "../../utils/AppLogo.jpg"
+import AppLogo from "../utils/AppLogo.jpg"
 
 const Header = () => {
   return (
     
-      <div className="h-20 max-w-7xl fixed top-0 left-0 right-0  flex px-28 justify-between items-center border-b-2 border-black">
+      <div className="h-20 max-w-7xl flex px-28 justify-between items-center border-b-2 border-black">
         <div className="p-1 overflow-hidden">
           <img className="w-16 h-16 " src={AppLogo} />
         </div>
