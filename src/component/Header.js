@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AppLogo from "../utils/AppLogo.jpg"
 
 const Header = () => {
@@ -5,15 +6,14 @@ const Header = () => {
     
       <div className="h-20 max-w-7xl flex px-28 justify-between items-center border-b-2 border-black">
         <div className="p-1 overflow-hidden">
-          <img className="w-16 h-16 " src={AppLogo} />
+          <img className="w-16 h-16  " src={AppLogo} />
         </div>
         <div className="">
           <ul className="flex gap-10 ">
-            <li>Search</li>
-            <li>Offers</li>
-            <li>Sign In</li>
-            <li>Cart</li>
-            <li>Help</li>
+            <li><Link to="/" className="hover:text-orange-600">Home</Link></li>
+            <li><Link to="/about" className="hover:text-orange-600">About</Link></li>
+            <li><Link to="/about" className="hover:text-orange-600">Sign In</Link></li>
+            <li><Link to="/about" className="hover:text-orange-600">Contact</Link></li>
           </ul>
         </div>
       </div>

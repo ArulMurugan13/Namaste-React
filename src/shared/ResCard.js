@@ -6,7 +6,7 @@ const ResCard = ({resData}) => {
   const { slaString} =resData?.info?.sla;
 
   return (
-    <div className="min-w-[278px] h-auto  hover: transform hover:scale-90 transition duration-300 ease-in-out">
+    <div className="min-w-[278px] h-auto  mr-5 hover: transform hover:scale-90 transition duration-300 ease-in-out">
       <div className="">
         <img
           className="w-[278px] h-[182px] rounded-3xl object-cover"
@@ -17,7 +17,9 @@ const ResCard = ({resData}) => {
           {avgRatingString + " Stars "}
           {slaString}
         </h2>
-        <p className="text-slate-500 overflow-auto no-scrollbar">{cuisines.join(",")}</p>
+        <p className="text-slate-500 overflow-auto no-scrollbar">
+          {cuisines.join(",")}
+        </p>
       </div>
     </div>
   );

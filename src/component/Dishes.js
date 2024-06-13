@@ -1,21 +1,20 @@
 
 import { useEffect, useState } from "react";
 import { BANGALORE } from "../utils/constants";
+import useApiData from "../utils/useApiData";
 
 const  Dishes = ()=>{
 
     const[listOfDishes , setListOfDishes] = useState([]);
-
+    const resData = useApiData();
     useEffect(()=>{
-        fetchData();
-    },[])
-
-    const fetchData = async ()=>{
-        const data = await fetch(BANGALORE);
-        const json = await data.json();
-        setListOfDishes(json?.data?.cards[0]?.card?.card?.imageGridCards?.info)
-    }
-
+        if(resData?.data?.cards[0]?.card?.card?.imageGridCards?.info)
+          {
+            setListOfDishes(
+              resData.data.cards[0].card.card.imageGridCards.info
+            );
+          }
+    },[resData])
 
     return (
       <div>

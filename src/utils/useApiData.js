@@ -4,7 +4,7 @@ import { BANGALORE } from "./constants";
 //custom hook
 const useApiData =()=>{
     
-    const [resData , setResData] = useState([]);
+    const [resData , setresData] = useState([]);
 
      useEffect(() => {
        fetchData();
@@ -14,7 +14,7 @@ const useApiData =()=>{
        const data = await fetch(BANGALORE);
        const json = await data.json();
 
-        setResData(json);
+        setresData(json);
      };
 
 
